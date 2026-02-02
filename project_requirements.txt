@@ -1,0 +1,6 @@
+Deliverables
+    1. A ZIP file containing the complete source code, including the local database or data file.
+    2. A public GitHub repository link containing the code and a detailed README.
+    3. A deployed demo link using a platform like Render, Railway, or Vercel.
+    4. A screen recording demonstrating the API endpoints being called via a tool like Postman or Insomnia, 
+        showing the data persisting and being retrieved.
