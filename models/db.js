@@ -1,15 +1,11 @@
 const sqlite3 = require("sqlite3").verbose();
 const path = require("path");
 
-// Absolute path to database file
-const dbPath = path.resolve("./data/database.sqlite");
 
-const db = new sqlite3.Database(dbPath, sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE, (err) => {
-  if (err) {
-    console.error("Failed to connect to database:", err.message);
-  } else {
-    console.log("Connected to SQLite database");
-  }
+const dbPath = path.resolve("./data/database.sqlite"); 
+const db = new sqlite3.Database(dbPath, sqlite3.OPEN_READONLY, (err) => {
+  if (err) console.error("DB connection error:", err.message);
+  else console.log("Connected to SQLite DB (read-only)");
 });
 
 // Enable foreign keys
